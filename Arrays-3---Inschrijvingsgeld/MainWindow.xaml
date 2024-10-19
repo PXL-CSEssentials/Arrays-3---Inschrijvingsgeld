@@ -1,0 +1,65 @@
+﻿<Window x:Class="Arrays_3___Inschrijvingsgeld.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Arrays_3___Inschrijvingsgeld"
+        mc:Ignorable="d"
+        Title="Inschrijvingsgeld" Height="600" Width="800">
+    <Grid Margin="10">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="auto"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"></RowDefinition>
+            <RowDefinition Height="auto"></RowDefinition>
+            <RowDefinition Height="auto"></RowDefinition>
+            <RowDefinition Height="auto"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <WrapPanel Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2">
+            <Label Content="Naam student:" HorizontalAlignment="Left" Height="42" Width="127"/>
+            <TextBox x:Name="nameTextBox" HorizontalAlignment="Left" Height="29" TextWrapping="Wrap" Text="Aleandro Mercken" VerticalAlignment="Top" Width="179"/>
+        </WrapPanel>
+        <WrapPanel Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2">
+            <Label Content="Opleiding:" HorizontalAlignment="Left" Height="33" Width="127"/>
+            <!--IsEditable:  ComboBox eventueel aanpasbaar maken-->
+            <ComboBox x:Name="studiesCombobox" HorizontalAlignment="Left" Height="33" Width="179" SelectionChanged="studiesCombobox_SelectionChanged" IsEditable="True" Text="Kies je opleiding....">
+                <ComboBoxItem Content="Programmeren"/>
+                <ComboBoxItem Content="Netwerkbeheer"/>
+                <ComboBoxItem Content="Internet of Things"/>
+                <ComboBoxItem Content="Digitale vormgever"/>
+                <ComboBoxItem Content="Drone opleiding"/>
+            </ComboBox>
+        </WrapPanel>
+        <CheckBox Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" x:Name="jobSeekerCheckBox" Margin="0 10 0 10" Content="Werkzoekend" Height="26" Width="173" HorizontalAlignment="Left" Click="jobSeekerCheckBox_Click"/>
+        <StackPanel Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2">
+            <Label Content="Hoogst behaald diploma" HorizontalAlignment="Left" Height="32" Width="213" FontWeight="Bold" FontStyle="Italic"/>
+            <StackPanel HorizontalAlignment="Left" Height="142" Width="195">
+                <StackPanel.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FFE07B6B" Offset="0.169"/>
+                        <GradientStop Color="White" Offset="0.939"/>
+                    </LinearGradientBrush>
+                </StackPanel.Background>
+                <!--Marginaanpassen als je ze niet tegen elkaar wilt-->
+                <RadioButton x:Name="secundaryRadioButton" Content="Hoger secundair" Margin="0,10" Click="secundaryRadioButton_Click"/>
+                <RadioButton x:Name="graduaatRadioButton" Content="Graduaat" Margin="0,0,0,10" Click="graduaatRadioButton_Click" IsChecked="True"/>
+                <RadioButton x:Name="bachelorRadioButton" Content="Bachelor" Margin="0,0,0,10" IsChecked="True" Click="bachelorRadioButton_Click"/>
+                <RadioButton x:Name="masterRadioButton" Content="Master" Click="masterRadioButton_Click"/>
+            </StackPanel>
+        </StackPanel>
+        <TextBox Grid.Row="4" Grid.Column="0" x:Name="resultTextBox" HorizontalAlignment="Left" Height="147" TextWrapping="Wrap" Width="465" BorderThickness="1"/>
+        <StackPanel Grid.Row="4" Grid.Column="1">
+            <!--<StackPanel.Resources>
+                <Style TargetType="Button">
+                    <Setter Property="Margin" Value="0 5 0 0"></Setter>
+                </Style>
+            </StackPanel.Resources>-->
+            <Button x:Name="calculateButton" Margin="0 0 0 5" Content="Berekenen" HorizontalAlignment="Left" Height="37" Width="140" Click="calculateButton_Click"/>
+            <Button x:Name="clearButton" Margin="0 0 0 5" Content="Wissen" HorizontalAlignment="Left" Height="34" Width="140" Click="clearButton_Click"/>
+            <Button x:Name="closeButton" Content="Afsluiten" HorizontalAlignment="Left" Height="34" Width="140" Click="closeButton_Click"/>
+        </StackPanel>
+    </Grid>
+</Window>
