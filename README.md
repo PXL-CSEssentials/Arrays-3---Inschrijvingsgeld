@@ -14,7 +14,7 @@ Dan zijn er nog een aantal objecten om het te betalen bedrag te bepalen:
 
   -----------------------------------------------------------------------
   Programmeren                                        €920,80
-  --------------------------------------------------- -------------------
+  
   Netwerkbeheer                                       €920,80
 
   Internet of Things                                  €520,80
