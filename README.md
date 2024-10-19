@@ -13,6 +13,7 @@ Dan zijn er nog een aantal objecten om het te betalen bedrag te bepalen:
     gekozen worden:
 
   -----------------------------------------------------------------------
+  
   Programmeren                                        €920,80
   
   Netwerkbeheer                                       €920,80
@@ -22,6 +23,7 @@ Dan zijn er nog een aantal objecten om het te betalen bedrag te bepalen:
   Digitale Vormgever                                  €750,80
 
   Drone opleiding                                     €520,80
+  
   -----------------------------------------------------------------------
 
 -   Er is ook een aankruisvakje "Werkzoekend". Wie werkzoekend is,
